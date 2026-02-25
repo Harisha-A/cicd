@@ -1,6 +1,8 @@
 /**
  * This file is intentionally designed to contain multiple types of coding errors,
  * security vulnerabilities, and bad practices for demonstration and testing purposes.
+ * 
+ * NOTE: This is a dummy edit to test Pull Requests!
  */
 
 // 1. SECURITY: Hardcoded Sensitive Information
@@ -70,7 +72,28 @@ function incompleteFunction() {
     }
 
     // 10. UNUSED VARIABLE
-    const unusedSecret = "nobody sees this";
+    const neglectedSecret = "this is still unseen";
+
+    // 11. LOGIC ERROR: Unreachable code
+    function performCheck() {
+        return true;
+        console.log("This will never execute"); // Unreachable code
+    }
+
+    // 12. SECURITY: Weak Cryptography (Mockup)
+    // Vulnerability: MD5 is considered cryptographically broken
+    const weakHash = "md5_hash_of_secret";
+
+    // 13. ANTI-PATTERN: God Object
+    // Anti-pattern: Object handles too many unrelated responsibilities
+    const godObject = {
+        userData: {},
+        config: {},
+        dbConnection: null,
+        handleRequest: () => { },
+        renderUI: () => { },
+        calculatePhysics: () => { }
+    };
 
     getUser("1'; DROP TABLE users; --");
     printNumbers();
